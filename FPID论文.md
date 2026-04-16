@@ -45,6 +45,8 @@ def infer_fast(self, e, de):
     return self.table[0,i_de,i_e], self.table[1,i_de,i_e]  # <0.1ms
 ```
 
+STM32 serial.c解析可选(sscanf)。
+
 ### 4.3.4 仿真与实验验证
 **仿真** (FuzzyPID.py 1000帧sin+噪): Mean 0.06ms，图4.5 (tu.png: e蓝/u橙，跟踪误差<2px，优固定PID 5px)。
 
@@ -59,6 +61,8 @@ def infer_fast(self, e, de):
 |------|---------|---------|----------|
 | 固定PID | 8.2     | 32      | 45       |
 | FPID   | 6.4     | 24      | 42       |
+
+图4.6 实轨迹: FPID u平滑，少振。
 
 ### 4.3.5 改进与不足
 **改进**: 5级规则(精度+10%)，Ki模糊(稳态0误差)。
