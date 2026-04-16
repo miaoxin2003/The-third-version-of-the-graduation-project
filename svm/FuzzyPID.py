@@ -8,7 +8,6 @@ class Membership:
     def triangle(x, a, b, c):
         return np.maximum(np.minimum((x - a) / (b - a + 1e-6), (c - x) / (c - b + 1e-6)), 0)
 
-
 class FuzzyPID:
     def __init__(self, table_path='svm/fuzzy_table.npy'):
         self.Kp_base = 0.04  # x轴示例
